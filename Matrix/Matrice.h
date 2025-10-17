@@ -9,17 +9,17 @@ private:
 	int cols;
 	int** data;
 public:
-	Matrice(int r, int c);
+	Matrice(int , int );
 	Matrice();
 	Matrice(const Matrice&);
 	void afficher() const;
 	void remplir();
-	Matrice operator+(const Matrice& m) const;
-	Matrice operator-(const Matrice& m) const;
-	Matrice  operator*(const Matrice& m) const;
-	Matrice  operator*(const int scalar) const;
+	Matrice operator+(const Matrice& ) const;
+	Matrice operator-(const Matrice& ) const;
+	Matrice  operator*(const Matrice& ) const;
+	Matrice  operator*(const int ) const;
 	Matrice transposee() const;
-	Matrice operator=(const Matrice& m);
+	Matrice operator=(const Matrice& );
 	~Matrice();
 };
 
