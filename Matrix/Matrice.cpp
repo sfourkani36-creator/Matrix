@@ -93,7 +93,7 @@ Matrice Matrice::operator*(const Matrice& m) const
 {
 	if (this->cols != m.rows) {
 		cout << "erreur les Matrices ne sont pas compatibles pour la multiplication" << endl;
-		return *this;
+		return *this;//c'est juste pour retourner quelque chose mieux que exit(0) qui sort du program
 	}
 	Matrice result(this->rows, m.cols);
 	for (int i = 0; i < this->rows; i++)
@@ -102,12 +102,12 @@ Matrice Matrice::operator*(const Matrice& m) const
 				result.data[i][j] += this->data[i][k] * m.data[k][j];
 	return result;
 }
-Matrice Matrice::operator*(const int scalar) const
+Matrice Matrice::operator*(const int k) const
 {
 	Matrice result(this->rows, this->cols);
 	for (int i = 0; i < this->rows; i++)
 		for (int j = 0; j < this->cols; j++)
-			result.data[i][j] = this->data[i][j] * scalar;
+			result.data[i][j] = this->data[i][j] * k;
 	return result;
 }
 Matrice Matrice::transposee() const
