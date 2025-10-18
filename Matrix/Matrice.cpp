@@ -20,6 +20,11 @@ Matrice::Matrice()
 	cin >> this->rows;
 	cout << "donner le nombre des colognes" << endl;
 	cin >> this->cols;
+	if(this->rows<0||this->cols<0)
+	{
+		cout<<"les dimension sont toujours des entiers positive "<<endl;
+		exit(-1);
+	}
 	this->data = new int* [rows];
 	for (int i = 0; i < rows; i++)
 	{
