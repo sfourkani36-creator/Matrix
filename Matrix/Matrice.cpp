@@ -67,7 +67,7 @@ Matrice Matrice::operator+(const Matrice& m) const
 {
 	if (this->rows != m.rows || this->cols != m.cols) {
 		cout << "erreur les Matrices ne sont pas de meme taille" << endl;
-		return *this;
+		return Matrice(0,0);
 	}
 
 	Matrice result(this->rows, this->cols);
@@ -80,7 +80,7 @@ Matrice Matrice::operator-(const Matrice& m) const
 {
 	if (this->rows != m.rows || this->cols != m.cols) {
 		cout << "erreur les Matrices ne sont pas de meme taille" << endl;
-		return *this;
+		return Matrice(0,0);
 	}
 
 	Matrice result(this->rows, this->cols);
@@ -93,7 +93,7 @@ Matrice Matrice::operator*(const Matrice& m) const
 {
 	if (this->cols != m.rows) {
 		cout << "erreur les Matrices ne sont pas compatibles pour la multiplication" << endl;
-		return *this;//c'est juste pour retourner quelque chose mieux que exit(0) qui sort du program
+		return Matrice(0,0);
 	}
 	Matrice result(this->rows, m.cols);
 	for (int i = 0; i < this->rows; i++)
